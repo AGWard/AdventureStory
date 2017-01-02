@@ -53,6 +53,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit" destination="BYZ-38-t0r" eventType="touchUpInside" id="djC-GI-KQY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -67,7 +70,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Y6Q-87-Ys2"/>
                     <connections>
+                        <outlet property="passwordField" destination="sbe-40-hmb" id="pJT-Bk-Awi"/>
                         <outlet property="submitButton" destination="j0v-rK-1Sm" id="cEA-yd-BJB"/>
+                        <outlet property="userNameField" destination="Uwa-Wh-feD" id="GCl-8V-qWM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
