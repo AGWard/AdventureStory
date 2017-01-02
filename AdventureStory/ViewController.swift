@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextViewDelegate {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var submitButton: UIButton!
     override func viewDidLoad() {
@@ -22,8 +22,17 @@ class ViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-   
+  
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if (textField.text?.characters.count)! > 0 {
+            submitButton.isEnabled = true
+        }
+        else {
+            submitButton.isEnabled = false
+        }
+        return true
+    }
 
 
 }
