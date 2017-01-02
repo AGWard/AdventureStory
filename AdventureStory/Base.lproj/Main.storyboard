@@ -73,11 +73,42 @@
                         <outlet property="passwordField" destination="sbe-40-hmb" id="pJT-Bk-Awi"/>
                         <outlet property="submitButton" destination="j0v-rK-1Sm" id="cEA-yd-BJB"/>
                         <outlet property="userNameField" destination="Uwa-Wh-feD" id="GCl-8V-qWM"/>
+                        <segue destination="Me6-C8-ClE" kind="show" identifier="toMainStory" id="sI2-yh-tmQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706.39999999999998" y="-543.77811094452773"/>
+        </scene>
+        <!--Main Story View Controller-->
+        <scene sceneID="ZNs-PC-Xff">
+            <objects>
+                <viewController id="Me6-C8-ClE" customClass="MainStoryViewController" customModule="AdventureStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PyB-8F-jBO"/>
+                        <viewControllerLayoutGuide type="bottom" id="lL0-92-SFB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4aU-cQ-Ltg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRN-hi-wOa">
+                                <rect key="frame" x="92" y="65" width="174" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="userName" destination="YRN-hi-wOa" id="IaX-HT-Mzw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSE-Is-Lau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461.5999999999999" y="-545.57721139430294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XJa-cw-w4B">

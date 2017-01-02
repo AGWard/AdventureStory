@@ -8,10 +8,7 @@
 
 import UIKit
 
-protocol credentilDelegate {
-    
-    func submitToStory()
-}
+
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,7 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    var delegate: credentilDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +42,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func submit() {
         if (userNameField.text == "anthony") && (passwordField.text == "1234") {
-            delegate?.submitToStory()
+            performSegue(withIdentifier: "toMainStory", sender: self)
+           
         } else {
             let alertController = UIAlertController(title: "Error", message: "incorrect username and/or password", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in})
@@ -56,6 +53,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             present(alertController, animated: true, completion: nil)
         }
     }
+    
+
 
 }
 
